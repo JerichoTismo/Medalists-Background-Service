@@ -25,24 +25,31 @@ This project is a background service designed to monitor a directory for new CSV
    git clone <your-repository-url>
    cd <your-project-directory>
 2. Setup Python Environment:
-  python -m venv venv
-  source venv/bin/activate   # For Linux/Mac
-  venv\Scripts\activate      # For Windows
-3. Install Dependencies:
-  pip install -r requirements.txt
-4. Create the necessary directory:
+   ```bash
+     python -m venv venv
+     source venv/bin/activate   # For Linux/Mac
+     venv\Scripts\activate      # For Windows
+4. Install Dependencies:
+   ```bash
+     pip install -r requirements.txt
+6. Create the necessary directory:
+   ```bash
    mkdir -p storage/app/medalists/archive
 
 Usage
-Start the Background Service
-Run the following command to start the service:
-   uvicorn api:app --reload
-   python .\service.py
-
 API Usage
 Endpoint to upload CSV files:
 POST /upload
 Endpoint to get aggregated stats:
 GET /aggregated_stats/event?page=<page_number>&per_page=<number>
+
+Start the Background Service
+Run the following command to start the service:
+```bash
+      uvicorn api:app --reload
+      python .\service.py
+
+
+
 
 
