@@ -37,10 +37,15 @@ This project is a background service designed to monitor a directory for new CSV
    mkdir -p storage/app/medalists/archive
 
 Usage
+
 API Usage
+
 Endpoint to upload CSV files:
+
 POST /upload
+
 Endpoint to get aggregated stats:
+
 GET /aggregated_stats/event?page=<page_number>&per_page=<number>
 
 Start the Background Service
